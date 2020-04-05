@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify'
 import logo from '../../assets/logo.svg'
 
+import FooterComponent from '../../components /Footer'
+
 import history from '../../services/history'
 import api from '../../services/api'
 
@@ -48,10 +50,7 @@ export default function RecoverPassword() {
           <a href="/login">Voltar</a>
         </div>
       </form>
-      <div className="footer">
-        <small>Harry Potter Challenge 1.0</small>
-        <small>By: Mateus 2020 © Todos os direitos reservados</small>
-      </div>
+     <FooterComponent />
   </React.Fragment>
   )
 }

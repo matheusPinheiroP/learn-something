@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 
 import history from '../../services/history';
 import logo from '../../assets/logo.svg'
+import FooterComponent from '../../components /Footer'
 
 import api from '../../services/api'
 
@@ -30,6 +31,7 @@ export default function SignUp() {
 
     try {
         await api.post('users', data)
+        toast.info('Muito bem, sua conta foi criada com sucesso.')
         history.push('/login')
       } catch (err) {
         toast.error('Alguma coisa deu errada, verifique seus dados')
@@ -66,10 +68,7 @@ export default function SignUp() {
           <a href="/login">Já tenho conta</a>
         </div>
       </form>
-      <div className="footer">
-        <small>Harry Potter Challenge 1.0</small>
-        <small>By: Mateus 2020 © Todos os direitos reservados</small>
-      </div>
+      <FooterComponent />
   </React.Fragment>
   )
 }

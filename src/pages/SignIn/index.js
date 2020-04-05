@@ -7,6 +7,7 @@ import * as Yup from 'yup'
 import { signInRequest } from '../../store/modules/auth/actions'
 
 import logo from '../../assets/logo.svg'
+import FooterComponent from '../../components /Footer'
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -40,10 +41,7 @@ export default function SignIn() {
           <Link to='/register'> Registre-se</Link>
         </div>
       </Form>
-      <div className="footer">
-        <small>Harry Potter Challenge 1.0</small>
-        <small>By: Mateus 2020 © Todos os direitos reservados</small>
-      </div>
+      <FooterComponent />
   </React.Fragment>
   )
 }

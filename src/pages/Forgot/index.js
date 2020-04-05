@@ -6,6 +6,7 @@ import logo from '../../assets/logo.svg'
 
 import api from '../../services/api'
 import history from '../../services/history'
+import FooterComponent from '../../components /Footer'
 
 const schema = Yup.object().shape({
   email: Yup.string().email('Insira um email válido').required('O email é obrigatório'),
@@ -48,10 +49,7 @@ export default function Forgot() {
           <a href='/login'>Voltar</a>
         </div>
       </form>
-      <div className='footer'>
-        <small>Harry Potter Challenge 1.0</small>
-        <small>By: Mateus 2020 © Todos os direitos reservados</small>
-      </div>
+     <FooterComponent />
     </React.Fragment>
   )
 }
